@@ -1,15 +1,11 @@
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useNavigate } from "react-router-dom";
-
 const ForRestaurants = () => {
   const navigate = useNavigate();
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-rose-50 via-purple-50 to-amber-50">
+  return <div className="min-h-screen bg-gradient-to-br from-rose-50 via-purple-50 to-amber-50">
       <Navbar />
       
       <section className="py-24 px-6">
@@ -65,17 +61,13 @@ const ForRestaurants = () => {
 
               <Card className="p-8 bg-white/80 backdrop-blur-sm">
                 <h3 className="text-xl font-semibold mb-4 text-purple-600">Vad om någon bokar men vi är fullbokade?</h3>
-                <p className="text-gray-600">Vi har ett avtal: Hedersgästen ska få kompensation – ni erbjuder gratis måltid, och vi täcker det.</p>
+                <p className="text-gray-600">Bokningssystemet kommer vara baserat på restaurangens bokningssystem, och kommer att uppdateras LIVE. Detta me</p>
               </Card>
             </div>
           </div>
 
           <div className="text-center">
-            <Button 
-              size="lg"
-              className="bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white px-12 py-4 text-xl"
-              onClick={() => navigate("/contact")}
-            >
+            <Button size="lg" className="bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white px-12 py-4 text-xl" onClick={() => navigate("/contact")}>
               Bli partner
             </Button>
           </div>
@@ -83,8 +75,6 @@ const ForRestaurants = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default ForRestaurants;
