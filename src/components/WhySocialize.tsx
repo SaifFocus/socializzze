@@ -1,14 +1,10 @@
-
 import { Card } from "@/components/ui/card";
-
 const WhySocialize = () => {
-  return (
-    <section className="py-24 px-6 bg-gradient-to-br from-white to-rose-50/30">
+  return <section className="py-24 px-6 bg-gradient-to-br from-white to-rose-50/30">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-rose-500 to-purple-600 bg-clip-text text-transparent">
-            Äkta möten över äkta måltider.
-          </h2>
+          <h2 className="text-4xl mb-6 bg-gradient-to-r from-rose-500 to-purple-600 bg-clip-text text-transparent md:text-4xl font-semibold">Folk. Mat. Magi. 
+Socialize gör det enkelt att koppla ihop allt</h2>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -38,13 +34,9 @@ const WhySocialize = () => {
         </div>
 
         <div className="bg-gradient-to-r from-rose-100 to-purple-100 rounded-2xl p-8 text-center">
-          <blockquote className="text-2xl md:text-3xl font-semibold text-gray-700 mb-4">
-            "Socialisering ska inte vara ensamt. Låt oss göra det meningsfullt."
-          </blockquote>
+          <blockquote className="text-2xl md:text-3xl font-semibold text-gray-700 mb-4">Möt nya människor. Dela en måltid. Skapa något mer.</blockquote>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default WhySocialize;
