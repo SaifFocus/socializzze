@@ -61,7 +61,7 @@ const ForRestaurants = () => {
 
               <Card className="p-8 bg-white/80 backdrop-blur-sm">
                 <h3 className="text-xl font-semibold mb-4 text-purple-600">Vad om någon bokar men vi är fullbokade?</h3>
-                <p className="text-gray-600">Bokningssystemet kommer vara baserat på restaurangens bokningssystem, och kommer att uppdateras LIVE. Detta me</p>
+                <p className="text-gray-600">Bokningssystemet kommer vara baserat på restaurangens bokningssystem, och kommer att uppdateras LIVE. Detta medför effektivitet och minskar missbokningar</p>
               </Card>
             </div>
           </div>
