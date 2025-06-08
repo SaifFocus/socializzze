@@ -8,17 +8,20 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Prevent body scroll when menu is open
+  // Prevent body scroll when menu is open and fix horizontal overflow
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflowX = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
+      document.documentElement.style.overflowX = 'unset';
     }
     
     // Cleanup on unmount
     return () => {
       document.body.style.overflow = 'unset';
+      document.documentElement.style.overflowX = 'unset';
     };
   }, [isMobileMenuOpen]);
 
@@ -36,9 +39,9 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-x-hidden">
       <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-rose-100">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-6 py-4 flex items-center justify-between max-w-full">
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-br from-amber-400 via-amber-300 to-yellow-400 rounded-full flex items-center justify-center shadow-lg">
               <span className="text-white font-bold text-xl">S</span>
@@ -98,46 +101,50 @@ const Navbar = () => {
         {/* Mobile Menu Overlay */}
         {isMobileMenuOpen && (
           <div 
-            className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"
             onClick={closeMobileMenu}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => {
-              if (e.key === 'Escape') closeMobileMenu();
-            }}
           />
         )}
 
         {/* Mobile Menu */}
         <div className={`
-          fixed top-0 right-0 h-full w-72 bg-white/95 backdrop-blur-md border-l border-rose-100 shadow-2xl z-50 md:hidden
+          fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white/95 backdrop-blur-md border-l border-rose-100 shadow-2xl z-50 md:hidden
           transform transition-transform duration-300 ease-in-out
           ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}
         `}>
           <div className="p-6 pt-20 h-full overflow-y-auto">
+            {/* Close button inside menu */}
+            <button
+              onClick={closeMobileMenu}
+              className="absolute top-4 right-4 p-2 rounded-lg hover:bg-rose-50 transition-colors"
+              aria-label="Close menu"
+            >
+              <X className="h-6 w-6 text-rose-600" />
+            </button>
+
             {/* Mobile Navigation Links */}
             <div className="space-y-6 mb-8">
               <button 
                 onClick={() => handleNavigation("/")} 
-                className="block w-full text-left text-lg text-gray-700 hover:text-rose-500 transition-colors py-2"
+                className="block w-full text-left text-lg text-gray-700 hover:text-rose-500 transition-colors py-3"
               >
                 Hem
               </button>
               <button 
                 onClick={() => handleNavigation("/how-it-works")} 
-                className="block w-full text-left text-lg text-gray-700 hover:text-rose-500 transition-colors py-2"
+                className="block w-full text-left text-lg text-gray-700 hover:text-rose-500 transition-colors py-3"
               >
                 Så fungerar det
               </button>
               <button 
                 onClick={() => handleNavigation("/for-restaurants")} 
-                className="block w-full text-left text-lg text-gray-700 hover:text-rose-500 transition-colors py-2"
+                className="block w-full text-left text-lg text-gray-700 hover:text-rose-500 transition-colors py-3"
               >
                 För restauranger
               </button>
               <button 
                 onClick={() => handleNavigation("/contact")} 
-                className="block w-full text-left text-lg text-gray-700 hover:text-rose-500 transition-colors py-2"
+                className="block w-full text-left text-lg text-gray-700 hover:text-rose-500 transition-colors py-3"
               >
                 Kontakt
               </button>
