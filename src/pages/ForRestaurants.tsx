@@ -1,14 +1,11 @@
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useNavigate } from "react-router-dom";
-
 const ForRestaurants = () => {
   const navigate = useNavigate();
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-rose-50 via-purple-50 to-amber-50">
+  return <div className="min-h-screen bg-gradient-to-br from-rose-50 via-purple-50 to-amber-50">
       <Navbar />
       
       <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6">
@@ -59,7 +56,7 @@ const ForRestaurants = () => {
             <div className="space-y-6">
               <Card className="p-6 sm:p-8 bg-white/80 backdrop-blur-sm">
                 <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-rose-600">Vad om vi inte har ett bokningssystem?</h3>
-                <p className="text-gray-600 text-sm sm:text-base">Vi kan hjälpa till att sätta upp det – eller bygga det åt er.</p>
+                <p className="text-gray-600 text-sm sm:text-base">Vi kan hjälpa till att sätta upp det – eller bygga det åt er. Kontakta oss för mer info.</p>
               </Card>
 
               <Card className="p-6 sm:p-8 bg-white/80 backdrop-blur-sm">
@@ -70,11 +67,7 @@ const ForRestaurants = () => {
           </div>
 
           <div className="text-center px-4">
-            <Button 
-              size="lg" 
-              className="w-full sm:w-auto bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white px-8 sm:px-12 py-4 text-lg sm:text-xl min-h-[48px]" 
-              onClick={() => navigate("/partner-form")}
-            >
+            <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white px-8 sm:px-12 py-4 text-lg sm:text-xl min-h-[48px]" onClick={() => navigate("/partner-form")}>
               Bli partner
             </Button>
           </div>
@@ -82,8 +75,6 @@ const ForRestaurants = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default ForRestaurants;
