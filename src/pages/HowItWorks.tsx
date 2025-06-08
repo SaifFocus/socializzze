@@ -1,15 +1,11 @@
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useNavigate } from "react-router-dom";
-
 const HowItWorks = () => {
   const navigate = useNavigate();
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-rose-50 via-purple-50 to-amber-50">
+  return <div className="min-h-screen bg-gradient-to-br from-rose-50 via-purple-50 to-amber-50">
       <Navbar />
       
       <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6">
@@ -65,25 +61,14 @@ const HowItWorks = () => {
           </div>
 
           <div className="text-center mt-12 sm:mt-16 p-8 sm:p-12 bg-gradient-to-r from-rose-100 to-purple-100 rounded-2xl">
-            <blockquote className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-700 mb-6 sm:mb-8 px-4">
-              "Socialisering ska inte vara ensamt. Låt oss göra det meningsfullt."
-            </blockquote>
+            <blockquote className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-700 mb-6 sm:mb-8 px-4">Allt börjar med ett bord – låt det bli början på något större</blockquote>
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
-              <Button 
-                size="lg"
-                className="w-full sm:w-auto bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white px-6 sm:px-8 py-4 text-base sm:text-lg min-h-[48px]"
-                onClick={() => navigate("/contact")}
-              >
+              <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white px-6 sm:px-8 py-4 text-base sm:text-lg min-h-[48px]" onClick={() => navigate("/contact")}>
                 <span className="hidden sm:inline">Ladda ner app – Kommer snart</span>
                 <span className="sm:hidden">Ladda ner app</span>
               </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                className="w-full sm:w-auto border-purple-300 text-purple-600 hover:bg-purple-50 px-6 sm:px-8 py-4 text-base sm:text-lg min-h-[48px]"
-                onClick={() => navigate("/contact")}
-              >
+              <Button size="lg" variant="outline" className="w-full sm:w-auto border-purple-300 text-purple-600 hover:bg-purple-50 px-6 sm:px-8 py-4 text-base sm:text-lg min-h-[48px]" onClick={() => navigate("/contact")}>
                 Gå med i väntelistan
               </Button>
             </div>
@@ -92,8 +77,6 @@ const HowItWorks = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default HowItWorks;
