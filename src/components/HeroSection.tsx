@@ -20,13 +20,13 @@ const HeroSection = () => {
         <div className="animate-fade-in">
           <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-rose-500 via-purple-600 to-amber-500 bg-clip-text text-transparent">
-              Möt.
+              Meet.
             </span>{" "}
             <span className="bg-gradient-to-r from-purple-600 via-amber-500 to-rose-500 bg-clip-text text-transparent">
-              Ät.
+              Eat.
             </span>{" "}
             <span className="bg-gradient-to-r from-amber-500 via-rose-500 to-purple-600 bg-clip-text text-transparent">
-              Knyt kontakter.
+              Connect.
             </span>
           </h1>
           
