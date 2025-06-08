@@ -36,7 +36,7 @@ const Navbar = () => {
           <Button 
             variant="outline" 
             className="border-rose-300 text-rose-600 hover:bg-rose-50"
-            onClick={() => navigate("/contact")}
+            onClick={() => navigate("/partner-form")}
           >
             Bli partner
           </Button>

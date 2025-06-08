@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import HowItWorks from "./pages/HowItWorks";
 import ForRestaurants from "./pages/ForRestaurants";
 import Contact from "./pages/Contact";
+import PartnerForm from "./pages/PartnerForm";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/for-restaurants" element={<ForRestaurants />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/partner-form" element={<PartnerForm />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -3,14 +3,16 @@ import { Card } from "@/components/ui/card";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useNavigate } from "react-router-dom";
+
 const ForRestaurants = () => {
   const navigate = useNavigate();
-  return <div className="min-h-screen bg-gradient-to-br from-rose-50 via-purple-50 to-amber-50">
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-rose-50 via-purple-50 to-amber-50">
       <Navbar />
       
       <section className="py-24 px-6">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16 py-8">
+          <div className="text-center mb-16 py-12">
             <h1 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-rose-500 to-purple-600 bg-clip-text text-transparent leading-relaxed">
               Fler gäster. Fler bokningar.
             </h1>
@@ -67,7 +69,7 @@ const ForRestaurants = () => {
           </div>
 
           <div className="text-center">
-            <Button size="lg" className="bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white px-12 py-4 text-xl" onClick={() => navigate("/contact")}>
+            <Button size="lg" className="bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white px-12 py-4 text-xl" onClick={() => navigate("/partner-form")}>
               Bli partner
             </Button>
           </div>
@@ -75,6 +77,8 @@ const ForRestaurants = () => {
       </section>
 
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default ForRestaurants;
