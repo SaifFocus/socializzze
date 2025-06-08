@@ -41,18 +41,18 @@ const Contact = () => {
     <div className="min-h-screen bg-gradient-to-br from-rose-50 via-purple-50 to-amber-50">
       <Navbar />
       
-      <section className="py-24 px-6">
+      <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-rose-500 to-purple-600 bg-clip-text text-transparent">
+          <div className="text-center mb-12 sm:mb-16">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-rose-500 to-purple-600 bg-clip-text text-transparent leading-tight">
               Frågor? Samarbeten?
             </h1>
-            <p className="text-xl text-gray-600">Hör av dig.</p>
+            <p className="text-lg sm:text-xl text-gray-600">Hör av dig.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            <Card className="p-8 bg-white/80 backdrop-blur-sm border-rose-100 shadow-xl">
-              <h2 className="text-2xl font-bold mb-6 text-rose-600">Kontakta oss</h2>
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
+            <Card className="p-6 sm:p-8 bg-white/80 backdrop-blur-sm border-rose-100 shadow-xl">
+              <h2 className="text-xl sm:text-2xl font-bold mb-6 text-rose-600">Kontakta oss</h2>
               <form onSubmit={handleFormSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -63,7 +63,7 @@ const Contact = () => {
                     type="text"
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    className="border-rose-200 focus:border-rose-400"
+                    className="border-rose-200 focus:border-rose-400 min-h-[44px] text-base"
                     required
                   />
                 </div>
@@ -77,7 +77,7 @@ const Contact = () => {
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    className="border-rose-200 focus:border-rose-400"
+                    className="border-rose-200 focus:border-rose-400 min-h-[44px] text-base"
                     required
                   />
                 </div>
@@ -90,22 +90,22 @@ const Contact = () => {
                     id="message"
                     value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
-                    className="border-rose-200 focus:border-rose-400 h-32"
+                    className="border-rose-200 focus:border-rose-400 min-h-[120px] text-base"
                     required
                   />
                 </div>
                 
                 <Button 
                   type="submit"
-                  className="w-full bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white"
+                  className="w-full bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white min-h-[48px]"
                 >
                   Skicka meddelande
                 </Button>
               </form>
             </Card>
 
-            <Card className="p-8 bg-white/80 backdrop-blur-sm border-purple-100 shadow-xl">
-              <h2 className="text-2xl font-bold mb-6 text-purple-600">Gå med i väntelistan</h2>
+            <Card className="p-6 sm:p-8 bg-white/80 backdrop-blur-sm border-purple-100 shadow-xl">
+              <h2 className="text-xl sm:text-2xl font-bold mb-6 text-purple-600">Gå med i väntelistan</h2>
               <p className="text-gray-600 mb-8">
                 Bli först med att veta när vi lanserar.
               </p>
@@ -120,7 +120,7 @@ const Contact = () => {
                     type="email"
                     value={newsletterEmail}
                     onChange={(e) => setNewsletterEmail(e.target.value)}
-                    className="border-purple-200 focus:border-purple-400"
+                    className="border-purple-200 focus:border-purple-400 min-h-[44px] text-base"
                     placeholder="din@email.se"
                     required
                   />
@@ -128,7 +128,7 @@ const Contact = () => {
                 
                 <Button 
                   type="submit"
-                  className="w-full bg-gradient-to-r from-purple-500 to-amber-500 hover:from-purple-600 hover:to-amber-600 text-white"
+                  className="w-full bg-gradient-to-r from-purple-500 to-amber-500 hover:from-purple-600 hover:to-amber-600 text-white min-h-[48px]"
                 >
                   Gå med i nyhetsbrevet
                 </Button>

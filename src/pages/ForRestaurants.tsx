@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Navbar from "@/components/Navbar";
@@ -10,66 +11,70 @@ const ForRestaurants = () => {
     <div className="min-h-screen bg-gradient-to-br from-rose-50 via-purple-50 to-amber-50">
       <Navbar />
       
-      <section className="py-24 px-6">
+      <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16 py-12">
-            <h1 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-rose-500 to-purple-600 bg-clip-text text-transparent leading-relaxed">
+          <div className="text-center mb-12 sm:mb-16 py-6 sm:py-12">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 sm:mb-8 bg-gradient-to-r from-rose-500 to-purple-600 bg-clip-text text-transparent leading-tight">
               Fler gäster. Fler bokningar.
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-lg sm:text-xl text-gray-600 px-4">
               Framtidens matupplevelse börjar här.
             </p>
           </div>
 
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center text-purple-600">Varför bli partner?</h2>
+          <div className="mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center text-purple-600">Varför bli partner?</h2>
             
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="p-8 bg-white/80 backdrop-blur-sm border-rose-100 hover:shadow-xl transition-all duration-300">
-                <div className="text-5xl mb-6">📢</div>
-                <h3 className="text-xl font-semibold mb-4 text-rose-600">Marknadsföringshjälp</h3>
-                <p className="text-gray-600">Vi lyfter fram er i appen och på våra sociala medier.</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              <Card className="p-6 sm:p-8 bg-white/80 backdrop-blur-sm border-rose-100 hover:shadow-xl transition-all duration-300">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6">📢</div>
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-rose-600">Marknadsföringshjälp</h3>
+                <p className="text-gray-600 text-sm sm:text-base">Vi lyfter fram er i appen och på våra sociala medier.</p>
               </Card>
 
-              <Card className="p-8 bg-white/80 backdrop-blur-sm border-purple-100 hover:shadow-xl transition-all duration-300">
-                <div className="text-5xl mb-6">👥</div>
-                <h3 className="text-xl font-semibold mb-4 text-purple-600">Socialt engagerade gäster</h3>
-                <p className="text-gray-600">Vi skickar människor som vill mer än bara äta.</p>
+              <Card className="p-6 sm:p-8 bg-white/80 backdrop-blur-sm border-purple-100 hover:shadow-xl transition-all duration-300">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6">👥</div>
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-purple-600">Socialt engagerade gäster</h3>
+                <p className="text-gray-600 text-sm sm:text-base">Vi skickar människor som vill mer än bara äta.</p>
               </Card>
 
-              <Card className="p-8 bg-white/80 backdrop-blur-sm border-amber-100 hover:shadow-xl transition-all duration-300">
-                <div className="text-5xl mb-6">💼</div>
-                <h3 className="text-xl font-semibold mb-4 text-amber-600">Enkel uppstart</h3>
-                <p className="text-gray-600">Välj 6 eller 12 månaders abonnemang – så är ni igång.</p>
+              <Card className="p-6 sm:p-8 bg-white/80 backdrop-blur-sm border-amber-100 hover:shadow-xl transition-all duration-300 sm:col-span-2 lg:col-span-1">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6">💼</div>
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-amber-600">Enkel uppstart</h3>
+                <p className="text-gray-600 text-sm sm:text-base">Välj 6 eller 12 månaders abonnemang – så är ni igång.</p>
               </Card>
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-amber-100 to-rose-100 rounded-2xl p-12 mb-16">
-            <h2 className="text-3xl font-bold mb-6 text-center text-amber-700">Bonus för tidiga partners</h2>
-            <p className="text-lg text-center text-amber-600">
+          <div className="bg-gradient-to-r from-amber-100 to-rose-100 rounded-2xl p-8 sm:p-12 mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-center text-amber-700">Bonus för tidiga partners</h2>
+            <p className="text-base sm:text-lg text-center text-amber-600 px-4">
               De första 10 restaurangerna i varje stad får extra synlighet och kampanjstöd.
             </p>
           </div>
 
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center text-purple-600">FAQ</h2>
+          <div className="mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center text-purple-600">FAQ</h2>
             
             <div className="space-y-6">
-              <Card className="p-8 bg-white/80 backdrop-blur-sm">
-                <h3 className="text-xl font-semibold mb-4 text-rose-600">Vad om vi inte har ett bokningssystem?</h3>
-                <p className="text-gray-600">Vi kan hjälpa till att sätta upp det – eller bygga det åt er.</p>
+              <Card className="p-6 sm:p-8 bg-white/80 backdrop-blur-sm">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-rose-600">Vad om vi inte har ett bokningssystem?</h3>
+                <p className="text-gray-600 text-sm sm:text-base">Vi kan hjälpa till att sätta upp det – eller bygga det åt er.</p>
               </Card>
 
-              <Card className="p-8 bg-white/80 backdrop-blur-sm">
-                <h3 className="text-xl font-semibold mb-4 text-purple-600">Vad om någon bokar men vi är fullbokade?</h3>
-                <p className="text-gray-600">Bokningssystemet kommer vara baserat på restaurangens bokningssystem, och kommer att uppdateras LIVE. Detta medför effektivitet och minskar missbokningar</p>
+              <Card className="p-6 sm:p-8 bg-white/80 backdrop-blur-sm">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-purple-600">Vad om någon bokar men vi är fullbokade?</h3>
+                <p className="text-gray-600 text-sm sm:text-base">Bokningssystemet kommer vara baserat på restaurangens bokningssystem, och kommer att uppdateras LIVE. Detta medför effektivitet och minskar missbokningar</p>
               </Card>
             </div>
           </div>
 
-          <div className="text-center">
-            <Button size="lg" className="bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white px-12 py-4 text-xl" onClick={() => navigate("/partner-form")}>
+          <div className="text-center px-4">
+            <Button 
+              size="lg" 
+              className="w-full sm:w-auto bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white px-8 sm:px-12 py-4 text-lg sm:text-xl min-h-[48px]" 
+              onClick={() => navigate("/partner-form")}
+            >
               Bli partner
             </Button>
           </div>
