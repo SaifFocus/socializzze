@@ -14,8 +14,8 @@ const ForRestaurants = () => {
       
       <section className="py-24 px-6">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-rose-500 to-purple-600 bg-clip-text text-transparent">
+          <div className="text-center mb-16 py-8">
+            <h1 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-rose-500 to-purple-600 bg-clip-text text-transparent leading-relaxed">
               Fler gäster. Fler bokningar.
             </h1>
             <p className="text-xl text-gray-600">
